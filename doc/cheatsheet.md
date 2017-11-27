@@ -55,103 +55,103 @@ f = 'word'      # 字符串
 ### 列表
 
 ```python
-a = ['red', 'blue', 'green']       # manually initialization
-b = list(range(5))                 # initialize from iteratable
-c = [nu**2 for nu in b]            # list comprehension
-d = [nu**2 for nu in b if nu < 3]  # conditioned list comprehension
-e = c[0]                           # access element
-f = c[1:2]                         # access a slice of the list
-g = c[-1]                          # access last element
-h = ['re', 'bl'] + ['gr']          # list concatenation
-i = ['re'] * 5                     # repeat a list
-['re', 'bl'].index('re')           # returns index of 're'
-a.append('yellow')                 # add new element to end of list
-a.extend(b)                        # add elements from list `b` to end of list `a`
-a.insert(1, 'yellow')              # insert element in specified position
-'re' in ['re', 'bl']               # true if 're' in list
-'fi' not in ['re', 'bl']           # true if 'fi' not in list
-sorted([3, 2, 1])                  # returns sorted list
-a.pop(2)                           # remove and return item at index (default last)
+a = ['red', 'blue', 'green']       # 手动初始化
+b = list(range(5))                 # 从迭代初始化
+c = [nu**2 for nu in b]            # 列表理解(list comprehension)
+d = [nu**2 for nu in b if nu < 3]  # 条件列表理解(conditioned list comprehension)
+e = c[0]                           # 访问元素
+f = c[1:2]                         # 访问列表的一个片段
+g = c[-1]                          # 访问最后一个元素
+h = ['re', 'bl'] + ['gr']          # 列表连接(list concatenation)
+i = ['re'] * 5                     # 重复一个列表
+['re', 'bl'].index('re')           # 返回're'的索引
+a.append('yellow')                 # 将新元素添加到列表的末尾
+a.extend(b)                        # 将列表“b”中的元素添加到列表“a”的末尾
+a.insert(1, 'yellow')              # 将元素插入指定位置
+'re' in ['re', 'bl']               # 如果're'在列表中，则返回真
+'fi' not in ['re', 'bl']           # 如果'fi'不在列表中，则返回真
+sorted([3, 2, 1])                  # 返回排序列表
+a.pop(2)                           # 删除并返回索引指向的元素（默认最后一个）
 ```
 
 ### 字典
 
 ```python
-a = {'red': 'rouge', 'blue': 'bleu'}         # dictionary
-b = a['red']                                 # translate item
-'red' in a                                   # true if dictionary a contains key 'red'
-c = [value for key, value in a.items()]      # loop through contents
-d = a.get('yellow', 'no translation found')  # return default
-a.setdefault('extra', []).append('cyan')     # init key with default
-a.update({'green': 'vert', 'brown': 'brun'}) # update dictionary by data from another one
-a.keys()                                     # get list of keys
-a.values()                                   # get list of values
-a.items()                                    # get list of key-value pairs
-del a['red']                                 # delete key and associated with it value
-a.pop('blue')                                # remove specified key and return the corresponding value
+a = {'red': 'rouge', 'blue': 'bleu'}         # 字典
+b = a['red']                                 # 获取指定键对应的值
+'red' in a                                   # 如果字典a包含键'红'，则返回真
+c = [value for key, value in a.items()]      # 遍历字典
+d = a.get('yellow', 'no translation found')  # 返回默认值
+a.setdefault('extra', []).append('cyan')     # 用默认值初始化键
+a.update({'green': 'vert', 'brown': 'brun'}) # 用另一个字典里的数据更新当前字典
+a.keys()                                     # 获取键列表
+a.values()                                   # 获取值列表
+a.items()                                    # 获取键-值对的列表
+del a['red']                                 # 删除键和与其关联的值
+a.pop('blue')                                # 删除指定的键并返回相应的值
 ```
 
 
 ### 集合
 
 ```python
-a = {1, 2, 3}                                # initialize manually
-b = set(range(5))                            # initialize from iteratable
-a.add(13)                                    # add new element to set
-a.discard(13)                                # discard element from set
-a.update([21, 22, 23])                       # update set with elements from iterable
-a.pop()                                      # remove and return an arbitrary set element
-2 in {1, 2, 3}                               # true if 2 in set
-5 not in {1, 2, 3}                           # true if 5 not in set
-a.issubset(b)                                # test whether every element in a is in b
-a <= b                                       # issubset in operator form
-a.issuperset(b)                              # test whether every element in b is in a
-a >= b                                       # issuperset in operator form
-a.intersection(b)                            # return the intersection of two sets as a new set
-a.difference(b)                              # return the difference of two or more sets as a new set
-a - b                                        # difference in operator form
-a.symmetric_difference(b)                    # return the symmetric difference of two sets as a new set
-a.union(b)                                   # return the union of sets as a new set
-c = frozenset()                              # the same as set but immutable
+a = {1, 2, 3}                                # 手动初始化
+b = set(range(5))                            # 从可迭代对象初始化
+a.add(13)                                    # 将新元素添加到集合
+a.discard(13)                                # 从集合中舍弃元素
+a.update([21, 22, 23])                       # 用来自可迭代对象中的元素更新当前集合
+a.pop()                                      # 删除并返回一个任意的集合元素
+2 in {1, 2, 3}                               # 如果集合中包含2，则返回真
+5 not in {1, 2, 3}                           # 如果集合中不包含5，则返回真
+a.issubset(b)                                # 测试集合a中的每个元素是否都在集合b中
+a <= b                                       # 测试集合a中的每个元素是否都在集合b中（用操作符表示）
+a.issuperset(b)                              # 测试集合b中的每个元素是否都在集合a中
+a >= b                                       # 测试集合b中的每个元素是否都在集合a中（用操作符表示）
+a.intersection(b)                            # 将两个集合的交集作为一个新集合返回
+a.difference(b)                              # 将两个或多个集合的差集作为新集合返回
+a - b                                        # 将两个或多个集合的差集作为新集合返回（用操作符表示）
+a.symmetric_difference(b)                    # 将两个集合的对称差集作为新的集合返回
+a.union(b)                                   # 将两个集合的并集作为新的集合返回
+c = frozenset()                              # 返回只读集合
 ```
 
 ### 字符串
 
 ```python
-a = 'red'                      # assignment
-char = a[2]                    # access individual characters
-'red ' + 'blue'                # string concatenation
-'1, 2, three'.split(',')       # split string into list
-'.'.join(['1', '2', 'three'])  # concatenate list into string
+a = 'red'                      # 赋值
+char = a[2]                    # 访问个别字符
+'red ' + 'blue'                # 字符串连接
+'1, 2, three'.split(',')       # 将字符串拆分成列表
+'.'.join(['1', '2', 'three'])  # 将列表连接起来并形成字符串
 ```
 
 ### 操作符
 
 ```python
-a = 2             # assignment
-a += 1 (*=, /=)   # change and assign
-3 + 2             # addition
-3 / 2             # integer (python2) or float (python3) division
-3 // 2            # integer division
-3 * 2             # multiplication
-3 ** 2            # exponent
-3 % 2             # remainder
-abs(a)            # absolute value
-1 == 1            # equal
-2 > 1             # larger
-2 < 1             # smaller
-1 != 2            # not equal
-1 != 2 and 2 < 3  # logical AND
-1 != 2 or 2 < 3   # logical OR
-not 1 == 2        # logical NOT
-'a' in b          # test if a is in b
-a is b            # test if objects point to the same memory (id)
+a = 2             # 赋值
+a += 1 (*=, /=)   # 更改并赋值
+3 + 2             # 加法
+3 / 2             # 整数 (python2)或浮点(python3)除法
+3 // 2            # 整数除法
+3 * 2             # 乘法
+3 ** 2            # 指数
+3 % 2             # 余数
+abs(a)            # 绝对值
+1 == 1            # 等于
+2 > 1             # 大于
+2 < 1             # 小于
+1 != 2            # 不等于
+1 != 2 and 2 < 3  # 逻辑与
+1 != 2 or 2 < 3   # 逻辑或
+not 1 == 2        # 逻辑否
+'a' in b          # 测试a是否在b中
+a is b            # 测试对象是否指向相同的内存区域(id)
 ```
 
 ### 控制流
 
 ```python
-# if/elif/else
+# if/elif/else条件判断
 a, b = 1, 2
 if a + b == 3:
     print('True')
@@ -160,18 +160,18 @@ elif a + b == 1:
 else:
     print('?')
 
-# for
+# for循环
 a = ['red', 'blue', 'green']
 for color in a:
     print(color)
 
-# while
+# while循环
 number = 1
 while number < 10:
     print(number)
     number += 1
 
-# break
+# break（跳出循环或条件判断）
 number = 1
 while True:
     print(number)
@@ -179,7 +179,7 @@ while True:
     if number > 10:
         break
 
-# continue
+# continue（跳过本次循环）
 for i in range(20):
     if i % 2 == 0:
         continue
@@ -189,15 +189,13 @@ for i in range(20):
 ### 函数, 类, 生成器, 修饰器
 
 ```python
-# Function groups code statements and possibly
-# returns a derived value
+# 函数（functions）对代码语句进行分组并可能有返回值
 def myfunc(a1, a2):
     return a1 + a2
 
 x = myfunc(a1, a2)
 
-# Class groups attributes (data)
-# and associated methods (functions)
+# 类（classes）对属性（数据）和相关方法（函数）进行分组
 class Point(object):
     def __init__(self, x):
         self.x = x
@@ -206,8 +204,7 @@ class Point(object):
 
 x = Point(3)
 
-# Generator iterates without
-# creating all values at once
+# 生成器（generators）能进行迭代但是不会一次生成所有的值
 def firstn(n):
     num = 0
     while num < n:
@@ -216,8 +213,7 @@ def firstn(n):
 
 x = [i for i in firstn(10)]
 
-# Decorator can be used to modify
-# the behaviour of a function
+# 修饰器（decorators）可以用来改变函数的行为
 class myDecorator(object):
     def __init__(self, f):
         self.f = f
