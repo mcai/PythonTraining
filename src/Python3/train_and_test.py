@@ -1,4 +1,4 @@
-from nn.network import NeuralNetwork
+from .network import NeuralNetwork
 import numpy as np
 
 
