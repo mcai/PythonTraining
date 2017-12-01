@@ -14,4 +14,7 @@
 
 ## 说明
 
-培训内容中MNIST手写体识别背景知识可以参见以下网站：http://neuralnetworksanddeeplearning.com/。
+培训内容中MNIST手写体识别背景知识可以参见以下网站：
+
+* http://neuralnetworksanddeeplearning.com/
+* https://github.com/makeyourownneuralnetwork/makeyourownneuralnetwork/
