@@ -1,12 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from .train_and_test import train_and_test
+from train_and_test import train_and_test
 
 print('Loading data..')
 
-mnist_train_data = np.loadtxt('../../data/mnist_train.csv', delimiter=',')
-mnist_test_data = np.loadtxt('../../data/mnist_test.csv', delimiter=',')
+mnist_train_data = np.loadtxt('data/mnist_train.csv', delimiter=',')
+mnist_test_data = np.loadtxt('data/mnist_test.csv', delimiter=',')
 
 num_inputs = 784
 num_hidden = 100
